@@ -16,7 +16,9 @@ public class Main_Logic {
     private static int generateNumber()
     {
         Random rand=new Random(System.currentTimeMillis());
-        int guess=rand.nextInt(6);
+        int guess=rand.nextInt(101);
+        if(guess==0)
+            guess+=1;
         returnNum=guess;
         return guess;
     }
