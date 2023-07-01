@@ -5,7 +5,7 @@ public class Number_Guess extends Main_Logic
         Scanner sc=new Scanner(System.in);
         System.out.println("Number Guessing Game");
         System.out.println("Welcome to the game where you guess numbers");
-
+        int score=0;
         boolean result;
         do
         {
@@ -15,21 +15,38 @@ public class Number_Guess extends Main_Logic
             if(result==true)
             {
                 System.out.println("Yes!!! the number Guessed is Correct");
-                break;
+                System.out.println("Want to play again?");
+                System.out.print("Press 'Y' or 'y' to continue,N or n to exit:");
+                score++;
+                char ch=sc.next().charAt(0);
+                if(ch=='y'||ch=='Y')
+                {
+                    continue;
+                }
+                else if(ch=='n'||ch=='N')
+                {
+                    System.out.println("Score:"+score);
+                    break;
+                }
+                else
+                {
+                    System.out.println("Wrong Input selected...");
+                    break;
+                }
+
             }
             else if(returnNum<num)
             {
                 System.out.println("Well... The number guessed is too high");
-                //System.out.println("Correct number is:"+returnNum);
                 System.out.println("Try Again!");
             }
             else
             {
                 System.out.println("Well... The number guessed is too low");
-                //result=guess(num);
                 System.out.println("Try Again!");
             }
         }while(true);
+
         sc.close();
     }
 }
