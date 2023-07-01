@@ -1,5 +1,3 @@
-//import java.util.*;
-
 import java.util.Random;
 
 public class Main_Logic {
