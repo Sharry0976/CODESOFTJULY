@@ -19,7 +19,8 @@ public class Word_Counter
         }
         else if(ch=='F')
         {
-            
+
         }
+        sc.close();
     }
 }
