@@ -22,6 +22,10 @@ public class Word_Counter extends WordCounter_Main_Logic
             System.out.println("Enter the Text:");
             str=sc.nextLine();
             word_size=normalWordSize(str);
+            if(word_size==0)
+            {
+                System.out.println("Empty String");
+            }
         }
         else if(ch=='F')
         {
@@ -30,6 +34,10 @@ public class Word_Counter extends WordCounter_Main_Logic
             FileName=sc.nextLine();
             str=readFile(FileName);
             word_size=normalWordSize(str);
+            if(word_size==0)
+            {
+                System.out.println("Empty File.");
+            }
         }
         System.out.println("Word size:"+word_size);
         sc.close();

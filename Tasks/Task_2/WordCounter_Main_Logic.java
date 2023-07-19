@@ -6,6 +6,10 @@ import java.util.Scanner;
 public class WordCounter_Main_Logic {
     public static int normalWordSize(String s)
     {
+        if(s.isEmpty())
+        {
+            return 0;
+        }
         s.trim();
         String words[]=s.split("[, .  ?]+");
         for(int i=0;i<words.length;i++)
@@ -21,6 +25,10 @@ public class WordCounter_Main_Logic {
     {
         String str="";
         Scanner inFile=new Scanner(new FileReader(fileName));
+        if(!inFile.hasNext())
+        {
+            return str;
+        }
         while(inFile.hasNext())
         {
             str+=inFile.nextLine();
