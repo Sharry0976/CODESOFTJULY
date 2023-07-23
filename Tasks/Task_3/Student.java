@@ -42,8 +42,10 @@ public class Student
                     Class=sc.nextInt();
                     System.out.println("Enter roll no:");
                     roll=sc.nextInt();
-
-                    student.addStudent(reg_Id,name,dateOfBirth,Class,roll);
+                    if(reg_Id==0||name==""||dateOfBirth==""||Class==0||roll==0)
+                        System.out.println("Empty Values.");
+                    else
+                        student.addStudent(reg_Id,name,dateOfBirth,Class,roll);
                     break;
                 case 2://Edit student
                     System.out.println("Enter Registration id:");
@@ -60,8 +62,13 @@ public class Student
                         Class=sc.nextInt();
                         System.out.println("Enter roll no:");
                         roll=sc.nextInt();
-                        String updatedString=reg_Id+" "+name+" "+dateOfBirth+" "+Class+" "+roll+" ";
-                        student.editExistingStudentData(reg_Id,updatedString);
+                        if(reg_Id==0||name==""||dateOfBirth==""||Class==0||roll==0)
+                            System.out.println("Empty Values.");
+                        else
+                        {
+                                String updatedString=reg_Id+" "+name+" "+dateOfBirth+" "+Class+" "+roll+" ";
+                                student.editExistingStudentData(reg_Id,updatedString);
+                        }
                     }
                     else
                     {

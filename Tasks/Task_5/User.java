@@ -109,5 +109,6 @@ public class User extends Contact {
             }
 
         }while(ch!=0);
+        sc.close();
     }
 }
