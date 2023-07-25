@@ -8,7 +8,7 @@ public class AtmMethods extends BankAccount{
         }
         else{
             amount=amount-withdrawAmt;
-            System.out.println("Amount of Rs. "+withdrawAmt+"withdrawn from the account...");
+            System.out.println("Amount of Rs. "+withdrawAmt+" withdrawn from the account...");
             System.out.println("Total amount is: Rs. "+amount);
             
         }
@@ -18,7 +18,7 @@ public class AtmMethods extends BankAccount{
     public void Deposit(int accNo,int depositAmt)
     {
         amount=amount+depositAmt;
-        System.out.println("Amount of Rs. "+depositAmt+"added to the account...");
+        System.out.println("Amount of Rs. "+depositAmt+" added to the account...");
         System.out.println("Total amount is: Rs. "+amount);
     }
     //Check Balance

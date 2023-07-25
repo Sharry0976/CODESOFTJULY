@@ -12,10 +12,10 @@ public class WordCounter_Main_Logic {
         }
         s.trim();
         String words[]=s.split("[, .  ?]+");
-        for(int i=0;i<words.length;i++)
-        {
-            System.out.print(words[i]+",");
-        }
+        //for(int i=0;i<words.length;i++)
+        //{
+        //    System.out.print(words[i]+",");
+        //}
         System.out.println();
         int size=words.length;
         

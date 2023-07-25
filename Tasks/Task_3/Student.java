@@ -120,10 +120,6 @@ public class Student
                     break;
             }
         }while (ch!=0);
-
-
-
-
         sc.close();
     }
 

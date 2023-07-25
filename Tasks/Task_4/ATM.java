@@ -37,22 +37,27 @@ public class ATM extends BankAccount
                         break;
                     case 1://Deisplay profile
                         atm.DisplayProfile();
+                        System.out.println();
                         break;
-                    case 2://check balance
+                        case 2://check balance
                         atm.CheckBalance(accNo);
+                        System.out.println();
                         break;
                     case 3:
                         System.out.println("Enter the amount you want to deposit:");
                         int depositAmt=sc.nextInt();
                         atm.Deposit(accNo, depositAmt);
+                        System.out.println();
                         break;
-                    case 4:
+                        case 4:
                         System.out.println("Enter the amount you want to withdraw:");
                         int withdrawAmt=sc.nextInt();
                         atm.WithDraw(accNo, withdrawAmt);
+                        System.out.println();
                         break;
-                    default:
+                        default:
                         System.out.println("Wrong Input...try again:");
+                        System.out.println();
                         break;
                 }
             }while(ch!=0);
